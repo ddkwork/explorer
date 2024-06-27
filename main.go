@@ -9,6 +9,6 @@ import (
 
 func main() {
 	app.Run("explorer", func(w *unison.Window) {
-		explorer.New(".").Layout(w.Content())
+		w.Content().AddChild(explorer.New(".").Layout())
 	})
 }
